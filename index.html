@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Reponsive | Kiet Lap Trinh</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo">
+          <a href="#"><b>KIETLAPTRINH</b></a>
+        </div>
+        <div class="audio-control">
+          <audio id="audio" src="assets/Faded.mp3"></audio>
+          <button id="play-btn" class="play-button">
+            <i class="ri-play-fill"></i>
+          </button>
+        </div>
+
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+
+        <input type="checkbox" name="check" id="check" />
+
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+
+          <h1 class="title">
+            I'm <span>Kiet Lap Trinh<br />a</span> Software Developer
+          </h1>
+
+          <p class="description">
+            Dedicated software developer with a passion for creating efficient
+            and scalable code. My expertise in modern web technologies allows me
+            to explore innovative solutions that enhance user experience. I am
+            committed to continuous learning, always striving to stay at the
+            forefront of the rapidly evolving tech industry.
+          </p>
+
+          <div class="action__btns">
+            <button class="hire__me">Intro</button>
+            <button class="portfolio">Portfolio</button>
+          </div>
+        </div>
+
+        <div class="image">
+          <img src="assets/phone-background.png" alt="profile" />
+        </div>
+      </div>
+    </section>
+    <!-----------javascript-->
+    <script>
+      document
+        .getElementById("play-btn")
+        .addEventListener("click", function () {
+          var audio = document.getElementById("audio");
+          if (audio.paused) {
+            audio.play();
+            this.innerHTML = '<i class="ri-pause-fill"></i>';
+          } else {
+            audio.pause();
+            this.innerHTML = '<i class="ri-play-fill"></i>';
+          }
+        });
+    </script>
+  </body>
+</html>
